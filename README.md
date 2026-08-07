@@ -1,4 +1,4 @@
-# 🎵 MMAG: Multi‑Control Mixed Audio Generation Benchmark
+# 🎵 MMAG: A Multi‑Control Mixed Audio Generation Benchmark
 
 **MMAG** is a comprehensive benchmark for evaluating mixed audio generation under multiple control conditions. It assesses a model's ability to generate coherent acoustic scenes containing speech, music, and sound effects simultaneously, while supporting fine-grained control over speaker identity and temporal alignment.
 

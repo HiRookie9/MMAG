@@ -35,7 +35,7 @@ We evaluate the following models on MMAG:
 
 ## 🙏 Acknowledgements
 
-We thank the authors of [MECAT](https://github.com/xiaomi-research/mecat) for providing the foundational data and annotation framework that this work builds upon.
+We thank the authors of [MECAT](https://github.com/xiaomi-research/mecat) for their valuable work.
 
 ---
 

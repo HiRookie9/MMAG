@@ -2,7 +2,7 @@
 
 **MMAG** is a comprehensive benchmark for evaluating mixed audio generation under multiple control conditions. It assesses a model's ability to generate coherent acoustic scenes containing speech, music, and sound effects simultaneously, while supporting fine-grained control over speaker identity and temporal alignment.
 
-[![arXiv](https://img.shields.io/badge/arXiv-1234.5678-b31b1b.svg)](https://arxiv.org/abs/xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-1234.5678-b31b1b.svg)](https://arxiv.org/abs/2608.06900)
 [![Project Page](https://img.shields.io/badge/Project-Page-1a6b8a.svg)](https://hirookie9.github.io/MMAG-Page)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-fcd022.svg)](https://huggingface.co/datasets/rookie9/MMAG)
 

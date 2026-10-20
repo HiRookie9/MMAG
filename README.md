@@ -10,7 +10,7 @@
 
 ## 🚀 Updates
 
-- [ ] Evaluation pipeline
+- [×] Evaluation pipeline
 - [ ] Raw multi-expert model pipeline  
 - [ ] New version release (more precise sound event and timestamp annotations)
 

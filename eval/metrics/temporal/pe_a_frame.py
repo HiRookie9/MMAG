@@ -63,7 +63,8 @@ def main(audio_folder, jsonl_path, output_jsonl_path, model_path, threshold=0.3)
     # Group entries by audio ID; one audio may have multiple captions.
     groups = defaultdict(list)
     for entry in entries:
-        groups[entry['id']].append(entry)
+        if entry['type']=="audio":
+            groups[entry['id']].append(entry)
 
     output_entries = []
 
@@ -128,7 +129,7 @@ if __name__ == "__main__":
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--model", required=True)
-    parser.add_argument("--threshold", type=float, default=0.8)
+    parser.add_argument("--threshold", type=float, default=0.5)
     args = parser.parse_args()
     os.makedirs(os.path.dirname(os.path.abspath(args.output)), exist_ok=True)
     main(args.audio_dir, args.manifest, args.output, args.model, args.threshold)

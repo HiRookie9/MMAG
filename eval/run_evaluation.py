@@ -73,7 +73,7 @@ def temporal(ns, selected, out):
     if "speech_f1" in selected:
         require(ns, "whisperx_model")
         pred = out / "speech_segments.jsonl"
-        run("metrics/temporal/whisperx.py", "--audio-dir", ns.audio_dir, "--manifest", ns.timestamp_reference,
+        run("metrics/temporal/whisperx_timestamp.py", "--audio-dir", ns.audio_dir, "--manifest", ns.timestamp_reference,
             "--output", pred, "--model", ns.whisperx_model, "--device", ns.device)
         run("metrics/temporal/speech_f1.py", "--prediction", pred, "--reference", ns.timestamp_reference,
             "--output", out / "speech_f1.jsonl")
@@ -97,7 +97,7 @@ def make_parser():
     p.add_argument("--ref-audio"); p.add_argument("--ref-caption")
     p.add_argument("--text-reference"); p.add_argument("--whisper-model")
     p.add_argument("--speaker-pairs"); p.add_argument("--whisperx-model"); p.add_argument("--timestamp-reference")
-    p.add_argument("--sound-prediction"); p.add_argument("--sound-model"); p.add_argument("--sound-threshold", type=float, default=0.8)
+    p.add_argument("--sound-prediction"); p.add_argument("--sound-model"); p.add_argument("--sound-threshold", type=float, default=0.3)
     p.add_argument("--semantic-manifest"); p.add_argument("--rubric-dir"); p.add_argument("--judge-model")
     p.add_argument("--audiobox-model"); p.add_argument("--utmos-checkpoint"); p.add_argument("--clap-model")
     p.add_argument("--device", default="cuda"); p.add_argument("--language", choices=["en", "zh"], default="en")

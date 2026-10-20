@@ -83,8 +83,9 @@ def main(pred_file, ref_file, output_file):
     ref_dict = defaultdict(list)
     for item in ref_data:
         audio_id = item['id']
-        start, end = parse_timestamp(item['timestamp'])
-        ref_dict[audio_id].append((start, end))
+        if item['type'] == "speech":
+            start, end = parse_timestamp(item['timestamp'])
+            ref_dict[audio_id].append((start, end))
 
     # 3. Evaluate the union of IDs.
     all_ids = sorted(set(ref_dict.keys()) | set(pred_dict.keys()))

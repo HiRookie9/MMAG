@@ -118,7 +118,7 @@ want to override that default with another Hugging Face ID or a local path.
 ## Input formats
 
 All manifests are UTF-8 JSONL. Audio IDs must match the audio filename stem;
-for example, `abc.wav` corresponds to `{"id": "abc"}`.
+for example, `abc.wav` corresponds to `{"id": "abc"}`. 
 
 * Reference audio: `{"audio_id": "abc", "audio": "/data/ref/abc.wav"}`.
 * Captions: `{"audio_id": "abc", "caption": "a dog barks"}`.
@@ -128,21 +128,3 @@ for example, `abc.wav` corresponds to `{"id": "abc"}`.
 * WhisperX prediction: `{"id": "abc", "segments": [{"start": 1.2, "end": 2.8}]}`.
 * SoundF1 prediction: `id`, `pred_timestamp`, and `original_timestamp` fields.
 * AAJ manifest: at least an `id` field and a matching `{id}.jsonl` rubric file.
-
-## Project information
-
-MMAG evaluates mixed-audio generation under multiple control conditions,
-including acoustic scenes, speaker identity, and temporal alignment.
-
-Evaluated systems include [AudioDirector](https://github.com/Riddae/AuDirector),
-[LTX-2.3](https://github.com/Lightricks/LTX-2),
-[Ovi 1.1](https://github.com/character-ai/Ovi),
-[MOVA](https://github.com/OpenMOSS/MOVA),
-[JavisDiT++](https://github.com/JavisVerse/JavisDiT),
-[UniAVGen](https://github.com/MCG-NJU/Sora2-mini),
-[Dasheng-AudioGen](https://github.com/xiaomi-research/dasheng-audiogen), and
-Ming-Omni-TTS.
-
-This project acknowledges the authors of
-[MECAT](https://github.com/xiaomi-research/mecat). See the repository-level
-license for redistribution terms.
